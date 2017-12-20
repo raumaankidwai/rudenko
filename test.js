@@ -38,12 +38,15 @@ function r (s) {
 	return rs;
 }
 
-var rs = [];
+var rs;
 
 while (s.join`` != rs.join``) {
 	console.log("Reducing");
-	rs = r(s);
+	
+	rs = rs || s.slice();
+	
 	s = rs.slice();
+	rs = r(s);
 }
 
 console.log(s.join` `);
