@@ -9,6 +9,10 @@ module.exports = class RudenkosDisk {
 		var start = move[0];
 		var end = move[1];
 		
+		if (typeof this[end][0] == "number") {
+			throw new Error(`Rudenko's Disk: Move ${move}: Blocked`);
+		}
+		
 		var startcolor = -1;
 		
 		for (let i = 0; i < 7; i ++) {
@@ -24,7 +28,7 @@ module.exports = class RudenkosDisk {
 		
 		var endcolor = startcolor;
 		
-		for (let i = 0; i <= startcolor; i ++) {
+		for (let i = 1; i <= startcolor; i ++) {
 			if (typeof this[end][i] == "number") {
 				endcolor = i - 1;
 				break;
