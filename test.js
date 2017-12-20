@@ -26,6 +26,7 @@ for (let i = 0; i < s.length; i ++) {
 	}
 	
 	if (cur[0] == cur[1]) {
+		i ++;
 		continue;
 	}
 	
