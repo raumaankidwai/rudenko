@@ -1,4 +1,4 @@
-class RudenkosDisk {
+module.exports = class RudenkosDisk {
 	constructor () {
 		this.L = [];
 		this.M = [0, 1, 2, 3, 4, 5, 6];
