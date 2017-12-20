@@ -9,12 +9,11 @@ for (var i = 0; i < 100; i ++) {
 			
 			disk.move(move);
 			console.log(move);
+			console.log(disk.L);
+			console.log(disk.M);
+			console.log(disk.R);
 		} catch (e) {
 			f();
 		}
 	})();
 }
-
-console.log(disk.L);
-console.log(disk.M);
-console.log(disk.R);
