@@ -10,7 +10,6 @@ for (var i = 0; i < 100; i ++) {
 			disk.move(move);
 			console.log(move);
 		} catch (e) {
-			console.log(e);
 			f();
 		}
 	})();
