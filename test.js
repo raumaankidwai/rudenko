@@ -43,7 +43,7 @@ var rs = [];
 while (s.join`` != rs.join``) {
 	console.log("Reducing");
 	
-	rs = rs || s.slice();
+	rs = rs.length ? rs : s.slice();
 	
 	s = rs.slice();
 	rs = r(s);
