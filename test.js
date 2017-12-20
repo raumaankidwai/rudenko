@@ -3,7 +3,6 @@ const RudenkosDisk = require("./rudenko.js");
 var disk = new RudenkosDisk();
 
 var s = [];
-var rs = [];
 
 for (let i = 0; i < 100; i ++) {
 	(function f () {
@@ -18,24 +17,35 @@ for (let i = 0; i < 100; i ++) {
 	})();
 }
 
-for (let i = 0; i < s.length; i ++) {
-	var cur = s[i];
+function r (s) {
+	var rs = [];
 	
-	if (s[i + 1] && s[i][1] == s[i + 1][0]) {
-		cur = s[i][0] + s[i + 1][1];
+	for (let i = 0; i < s.length; i ++) {
+		var cur = s[i];
+
+		if (s[i + 1] && s[i][1] == s[i + 1][0]) {
+			cur = s[i][0] + s[i + 1][1];
+		}
+
+		if (cur[0] == cur[1]) {
+			i ++;
+			continue;
+		}
+
+		rs.push(cur);
 	}
 	
-	if (cur[0] == cur[1]) {
-		i ++;
-		continue;
-	}
-	
-	rs.push(cur);
+	return rs;
+}
+
+var rs = s.slice();
+
+while (s.join`` == rs.join``) {
+	s = rs.slice()
+	rs = r(s);
 }
 
 console.log(s.join` `);
-console.log("-".repeat(10));
-console.log(rs.join` `);
 console.log(disk.L);
 console.log(disk.M);
 console.log(disk.R);
