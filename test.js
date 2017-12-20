@@ -12,7 +12,7 @@ for (var i = 0; i < 100; i ++) {
 		} catch (e) {
 			f();
 		}
-	});
+	})();
 }
 
 console.log(disk.L);
