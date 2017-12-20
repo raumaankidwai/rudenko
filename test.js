@@ -40,7 +40,7 @@ function r (s) {
 
 var rs = s.slice();
 
-while (s.join`` == rs.join``) {
+while (s.join`` != rs.join``) {
 	s = rs.slice()
 	rs = r(s);
 }
