@@ -9,7 +9,7 @@ module.exports = class RudenkosDisk {
 		var start = move[0];
 		var end = move[1];
 		
-		var startcolor;
+		var startcolor = -1;
 		
 		for (let i = 0; i < 7; i ++) {
 			if (typeof this[start][i] == "number") {
@@ -18,7 +18,7 @@ module.exports = class RudenkosDisk {
 			}
 		}
 		
-		if (!startcolor) {
+		if (startcolor < 0) {
 			throw new Error(`Rudenko's Disk: Move ${move}: No colors in slice ${start}`);
 		}
 		
