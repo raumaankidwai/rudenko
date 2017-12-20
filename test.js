@@ -32,6 +32,8 @@ for (let i = 0; i < s.length; i ++) {
 	rs.push(cur);
 }
 
+console.log(s.join` `);
+console.log("-".repeat(10));
 console.log(rs.join` `);
 console.log(disk.L);
 console.log(disk.M);
