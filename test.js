@@ -41,6 +41,7 @@ function r (s) {
 var rs = [];
 
 while (s.join`` != rs.join``) {
+	console.log(s.join` `);
 	console.log("Reducing");
 	
 	rs = rs.length ? rs : s.slice();
