@@ -38,7 +38,7 @@ function r (s) {
 	return rs;
 }
 
-var rs;
+var rs = [];
 
 while (s.join`` != rs.join``) {
 	console.log("Reducing");
